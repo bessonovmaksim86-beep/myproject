@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="UTF-8"><title>Dashboard</title></head>
+<body>
+<div th:replace="layout :: content">
+    <h1>Дашборд</h1>
+    <div class="row">
+        <div class="col-md-3">Доход: <span th:text="${metrics.totalIncome}"></span></div>
+        <div class="col-md-3">Расход: <span th:text="${metrics.totalExpense}"></span></div>
+        <div class="col-md-3">Баланс: <span th:text="${metrics.balance}"></span></div>
+        <div class="col-md-3">Операций: <span th:text="${metrics.transactionCount}"></span></div>
+    </div>
+    <canvas id="financeChart"></canvas>
+</div>
+</body>
+</html>
